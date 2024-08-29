@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Quiz - Cybersecurity Training</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="../dashboard.html" class="headerlink">
+                    <img src="../images/Healthcare cyber support.png" alt="Healthcare Cyber support logo" class="logo">
+                    <div class="header-text">
+                        <h1>Module 1 Quiz</h1>
+                        <p class="header-p">Introduction to Cybersecurity</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h2>Test Your Knowledge</h2>
+            <form id="quiz-form">
+                <div class="quiz-question">
+                    <p>1. What is the main purpose of cybersecurity?</p>
+                    <input type="radio" name="q1" value="a" id="q1a">
+                    <label for="q1a">To protect data from unauthorized access and damage</label><br>
+                    <input type="radio" name="q1" value="b" id="q1b">
+                    <label for="q1b">To monitor internet activity</label><br>
+                    <input type="radio" name="q1" value="c" id="q1c">
+                    <label for="q1c">To restrict access to social media</label><br>
+                </div>
+
+                <div class="quiz-question">
+                    <p>2. Which of the following is a common type of cyber threat?</p>
+                    <input type="radio" name="q2" value="a" id="q2a">
+                    <label for="q2a">Malware</label><br>
+                    <input type="radio" name="q2" value="b" id="q2b">
+                    <label for="q2b">Spam email</label><br>
+                    <input type="radio" name="q2" value="c" id="q2c">
+                    <label for="q2c">Network latency</label><br>
+                </div>
+
+                <!-- Additional questions... -->
+
+                <button type="submit" class="btn">Submit Quiz</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Healthcare Cybersecurity Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simple quiz validation (expand as needed)
+            let correctAnswers = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'a') correctAnswers++;
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'a') correctAnswers++;
+
+            alert(`You answered ${correctAnswers} questions correctly!`);
+            completeModule('module1');
+            window.location.href = "../training.html"; // Redirect back to training page
+        });
+    </script>
+</body>
+</html>

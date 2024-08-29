@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Training - Healthcare Cyber support</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="dashboard.html" class="headerlink">
+                    <img src="/images/Healthcare cyber support.png" alt="Healthcare Cybersecurity Dashboard Logo" class="logo">
+                    <div class="header-text">
+                        <h1>Healthcare Cyber support</h1>
+                        <p class="header-p">Incident Reporting and Management</p>
+                    </div>
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="dashboard.html">dashboard</a></li>
+                        <li><a href="threats.html">Threats</a></li>
+                        <li><a href="incidents.html">Incidents</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="/trainings.html">trainings</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="logout-btn">
+                    <button class="btn btn-danger">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h2>Cybersecurity Awareness Training Program</h2>
+
+            <section class="training-module">
+                <h3>Module 1: Introduction to Cybersecurity</h3>
+                <p><strong>Objective:</strong> Understand the basics of cybersecurity and why it’s important.</p>
+                <ul>
+                    <li>What is Cybersecurity?</li>
+                    <li>The Importance of Cybersecurity</li>
+                    <li>Common Cyber Threats (Viruses, Malware, Phishing, etc.)</li>
+                    <li>The Role of Human Behavior in Cybersecurity</li>
+                </ul>
+                <button class="btn" onclick="startQuiz('module1')">Start Quiz</button>
+            </section>
+
+            <section class="training-module">
+                <h3>Module 2: Password Security</h3>
+                <p><strong>Objective:</strong> Learn how to create and manage strong passwords.</p>
+                <ul>
+                    <li>What Makes a Strong Password?</li>
+                    <li>Common Password Mistakes</li>
+                    <li>Password Managers</li>
+                    <li>Two-Factor Authentication (2FA)</li>
+                </ul>
+                <button class="btn" onclick="startQuiz('module2')">Start Quiz</button>
+            </section>
+
+            <section class="training-module">
+                <h3>Module 3: Phishing Awareness</h3>
+                <p><strong>Objective:</strong> Recognize and avoid phishing attacks.</p>
+                <ul>
+                    <li>What is Phishing?</li>
+                    <li>Common Phishing Techniques</li>
+                    <li>How to Identify Phishing Emails</li>
+                    <li>Actions to Take if You Suspect a Phishing Attempt</li>
+                </ul>
+                <button class="btn" onclick="startQuiz('module3')">Start Quiz</button>
+            </section>
+
+            <!-- Continue with more modules... -->
+
+            <section class="training-module">
+                <h3>Module 8: Responding to a Cybersecurity Incident</h3>
+                <p><strong>Objective:</strong> Learn what to do if you experience a cybersecurity incident.</p>
+                <ul>
+                    <li>Steps to Take Immediately After a Breach</li>
+                    <li>Reporting Incidents to IT/Security Teams</li>
+                    <li>Recovering from Cyber Attacks</li>
+                    <li>Legal Obligations and Data Breach Notifications</li>
+                </ul>
+                <button class="btn" onclick="startQuiz('module8')">Start Quiz</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Healthcare Cyber support. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Include JavaScript for handling quizzes and progress tracking -->
+    <script src="js/quiz.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>

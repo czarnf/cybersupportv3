@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Healthcare Cyber Support</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="dashboard.html" class="headerlink">
+                    <img src="/images/Healthcare cyber support.png" alt="Healthcare Cybersecurity Dashboard Logo" class="logo">
+                    <div class="header-text">
+                        <h1>Healthcare Cyber support</h1>
+                        <p class="header-p">Incident Reporting and Management</p>
+                    </div>
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="threats.html">Threats</a></li>
+                        <li><a href="incidents.html">Incidents</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="/trainings.html">trainings</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="logout-btn">
+                    <button class="btn btn-danger">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Weather Widget Section -->
+            <section id="weather-widget" class="dashboard-section collapsible">
+                <h2><i class="fa fa-cloud" aria-hidden="true"></i> Current Weather</h2>
+                <div class="content">
+                    <div id="openweathermap-widget-11"></div>
+                    <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+                    <script>
+                        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                        window.myWidgetParam.push({
+                            id: 11,
+                            cityid: '2643743', // Replace with your city's ID
+                            appid: '0ec6b237b02b2cf354df1eb14803c442', // Replace with your actual API key
+                            units: 'metric', // Options: 'metric', 'imperial', etc.
+                            containerid: 'openweathermap-widget-11',
+                        });
+                        (function() {
+                            var script = document.createElement('script');
+                            script.async = true;
+                            script.charset = "utf-8";
+                            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(script, s);
+                        })();
+                    </script>
+                </div>
+            </section>
+
+            <!-- Threat Intelligence Section -->
+            <section id="threat-intelligence" class="dashboard-section collapsible">
+                <h2><i class="fa fa-shield" aria-hidden="true"></i> Threat Intelligence</h2>
+                <div id="threat-intelligence-content" class="content">
+                    <p>Loading threat intelligence data...</p>
+                </div>
+            </section>
+
+            <!-- Vulnerability Report Section -->
+            <section id="vulnerability-report" class="dashboard-section collapsible">
+                <h2><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Vulnerability Report</h2>
+                <div id="vulnerability-report-content" class="content">
+                    <p>Loading vulnerability data...</p>
+                </div>
+            </section>
+
+            <!-- Operating Systems Monitoring Section -->
+            <section id="os-monitoring" class="dashboard-section collapsible">
+                <h2><i class="fa fa-desktop" aria-hidden="true"></i> Operating Systems Monitoring</h2>
+                <div id="os-monitoring-content" class="content">
+                    <canvas id="osChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Device Usage Monitoring Section -->
+            <section id="device-usage" class="dashboard-section collapsible">
+                <h2><i class="fa fa-mobile" aria-hidden="true"></i> Device Usage Monitoring</h2>
+                <div id="device-usage-content" class="content">
+                    <canvas id="deviceChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Encryption Status Section -->
+            <section id="encryption-status" class="dashboard-section collapsible">
+                <h2><i class="fa fa-lock" aria-hidden="true"></i> Encryption Status</h2>
+                <div id="encryption-status-content" class="content">
+                    <canvas id="encryptionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Network Health Overview Section -->
+            <section id="network-health" class="dashboard-section collapsible">
+                <h2><i class="fa fa-network-wired" aria-hidden="true"></i> Network Health Overview</h2>
+                <div id="network-health-content" class="content">
+                    <canvas id="networkHealthChart"></canvas>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Privacy Policy ~ Terms & Conditions</p>
+            <p>&copy; 2024 Healthcare Cyber Support. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

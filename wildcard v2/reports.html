@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Healthcare Cybersecurity Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="dashboard.html" class="headerlink">
+                    <img src="/images/Healthcare cyber support.png" alt="Healthcare Cybersecurity Dashboard Logo" class="logo">
+                    <div class="header-text">
+                        <h1>Healthcare Cyber support</h1>
+                        <p class="header-p">Incident Reporting and Management</p>
+                    </div>
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="dashboard.html">dashboard</a></li>
+                        <li><a href="threats.html">Threats</a></li>
+                        <li><a href="incidents.html">Incidents</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="/trainings.html">trainings</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="logout-btn">
+                    <button class="btn btn-danger">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Generate Reports Section -->
+            <section class="dashboard-section">
+                <h2><i class="fa fa-file-alt" aria-hidden="true"></i> Generate Report</h2>
+                <div class="content">
+                    <form id="generate-report-form">
+                        <label for="report-type">Report Type:</label>
+                        <select id="report-type" name="report-type">
+                            <option value="threats">Threats</option>
+                            <option value="incidents">Incidents</option>
+                            <option value="vulnerabilities">Vulnerabilities</option>
+                        </select>
+
+                        <label for="report-period">Period:</label>
+                        <select id="report-period" name="report-period">
+                            <option value="last-week">Last Week</option>
+                            <option value="last-month">Last Month</option>
+                            <option value="last-quarter">Last Quarter</option>
+                        </select>
+
+                        <button type="submit" class="btn">Generate Report</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- View and Export Reports Section -->
+            <section class="dashboard-section">
+                <h2><i class="fa fa-download" aria-hidden="true"></i> View & Export Reports</h2>
+                <div class="content" id="report-list">
+                    <!-- Report items will be populated here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Healthcare Cybersecurity Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Include necessary scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/reports.js"></script>
+</body>
+</html>

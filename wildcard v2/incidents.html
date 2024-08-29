@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents - Healthcare Cyber support</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="dashboard.html" class="headerlink">
+                    <img src="/images/Healthcare cyber support.png" alt="Healthcare Cybersecurity Dashboard Logo" class="logo">
+                    <div class="header-text">
+                        <h1>Healthcare Cyber support</h1>
+                        <p class="header-p">Incident Reporting and Management</p>
+                    </div>
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="dashboard.html">dashboard</a></li>
+                        <li><a href="threats.html">Threats</a></li>
+                        <li><a href="incidents.html">Incidents</a></li>
+                        <li><a href="reports.html">Reports</a></li>
+                        <li><a href="/trainings.html">trainings</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="logout-btn">
+                    <button class="btn btn-danger">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Incident Reporting Section -->
+            <section class="dashboard-section">
+                <h2><i class="fa fa-bug" aria-hidden="true"></i> Report an Incident</h2>
+                <div class="content">
+                    <form id="incident-report-form">
+                        <label for="incident-type">Incident Type:</label>
+                        <select id="incident-type" name="incident-type">
+                            <option value="malware">Malware</option>
+                            <option value="phishing">Phishing</option>
+                            <option value="ddos">DDoS</option>
+                            <option value="data-breach">Data Breach</option>
+                        </select>
+
+                        <label for="incident-description">Description:</label>
+                        <textarea id="incident-description" name="incident-description" rows="4"></textarea>
+
+                        <button type="submit" class="btn">Submit Report</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Incident History Section -->
+            <section class="dashboard-section">
+                <h2><i class="fa fa-history" aria-hidden="true"></i> Incident History</h2>
+                <div class="content" id="incident-history">
+                    <!-- Incident history items will be populated here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Healthcare cyber support. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Include necessary scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/incidents.js"></script>
+</body>
+</html>
